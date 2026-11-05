@@ -1,0 +1,66 @@
+{
+    "name": "krytenuk/doctrine-auth-app-2fa",
+    "description": "Authenticator app two factor authentication for krytenuk/doctrine-auth",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "homepage": "https://github.com/krytenuk/doctrine-auth-app-2fa",
+    "keywords": [
+        "mezzio",
+        "authentication",
+        "two factor",
+        "2fa",
+        "totp",
+        "authenticator",
+        "doctrine",
+        "freedom"
+    ],
+    "authors": [
+        {
+            "name": "Garry Childs",
+            "email": "info@freedomwebservices.net",
+            "homepage": "https://www.freedomwebservices.net/laminas/fws-doctrine-auth"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "doctrine/orm": "^2.20",
+        "krytenuk/doctrine-auth": "^2.0@dev",
+        "mezzio/mezzio-session": "^1.15",
+        "pragmarx/google2fa": "^8.0",
+        "psr/clock": "^1.0",
+        "psr/container": "^1.1 || ^2.0",
+        "psr/event-dispatcher": "^1.0"
+    },
+    "require-dev": {
+        "endroid/qr-code": "^6.0",
+        "laminas/laminas-diactoros": "^3.5",
+        "laminas/laminas-servicemanager": "^3.22",
+        "laminas/laminas-stdlib": "^3.19",
+        "phpunit/phpunit": "^11.5",
+        "roave/psr-container-doctrine": "^4.2"
+    },
+    "suggest": {
+        "endroid/qr-code": "To make the QR code that pairs an authenticator app"
+    },
+    "autoload": {
+        "psr-4": {
+            "FwsDoctrineAuth\\AppTwoFactor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "FwsDoctrineAuthTest\\AppTwoFactor\\": "test/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../doctrine-auth"
+        }
+    ],
+    "extra": {
+        "laminas": {
+            "config-provider": "FwsDoctrineAuth\\AppTwoFactor\\ConfigProvider"
+        }
+    }
+}

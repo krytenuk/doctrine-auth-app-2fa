@@ -1,0 +1,11 @@
+<?php
+
+return [
+    'doctrine-auth' => [
+        'app_2fa' => [
+            'issuer' => 'My Site', // <- Your site's name, which users see next to the codes in their authenticator app
+            // 'window' => 1, // <- 30 second steps either side of now to accept, for phones whose clocks are a little out
+            // 'recovery_codes' => 10, // <- How many single use recovery codes a user gets
+        ],
+    ],
+];
